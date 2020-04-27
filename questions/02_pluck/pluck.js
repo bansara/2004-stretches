@@ -17,7 +17,10 @@ returns { a: 1, c: 42};
 */
 
 function pluck(obj, elements) {
-  // YOUR CODE
+  return elements.reduce((a,c) => {
+      a[c] = obj[c];
+      return a;
+  },{})
 }
 
 module.exports = { pluck };
