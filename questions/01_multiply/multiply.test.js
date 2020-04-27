@@ -6,7 +6,7 @@ describe('multiply testing', () => {
 
     expect(multiply('mike', 'joe')).toThrow();
 
-    expect(multiply(1, 2, 3)).toThrow();
+    expect(multiply(1, [1,2,3])).toThrow();
   });
 
   test('it returns the product of two numbers', () => {
