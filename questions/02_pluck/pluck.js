@@ -18,8 +18,10 @@ returns { a: 1, c: 42};
 
 function pluck(obj, elements) {
   return elements.reduce((a,c) => {
+    if(obj.hasOwnProperty(c)) {
       a[c] = obj[c];
-      return a;
+    }
+    return a;
   },{})
 }
 
