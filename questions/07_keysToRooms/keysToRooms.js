@@ -18,6 +18,18 @@ ex 2.
 
 const keysToRooms = (rooms) => {
   //YOUR CODE HERE
+  const length = rooms.length;
+  let keys = [];
+  rooms.forEach(room => {
+    keys = [...keys, ...room]
+  })
+  const keySet = [...new Set(keys)].filter(key => key !== 0);
+  const sortedString = keySet.sort((a,b)=>a-b).join('');
+  let countingString = '';
+  for(let i = 1; i <= rooms.length; i++){
+    countingString += i;
+  }
+  return sortedString.length === countingString.length;
 };
 
 module.exports = { keysToRooms };
