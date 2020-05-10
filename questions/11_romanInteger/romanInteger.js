@@ -22,8 +22,25 @@ examples:
 1994 // MCMXCIV
 */
 
-const romanInteger = () => {
+const romanInteger = (num) => {
   //YOUR CODE HERE
-};
+  if (num < 1 || num >= 4000 || typeof num !== 'number') throw 'this input sucks.';
+  let romanNumerals = [
+    ['','I','II','III','IV','V','VI','VII','VIII','IX'],
+    ['','X','XX','XXX','XL','L','LX','LXX','LXXX','XC'],
+    ['','C','CC','CCC','CD','D','DC','DCC','DCCC','CM'],
+    ['','M','MM','MMM']
+  ]
+  const numArray = num.toString().split('').map(n => Number(n)).reverse();
+  
+  let result = '';
 
+  numArray.forEach((num, idx) => {
+    result = romanNumerals[idx][num] + result;
+  } )
+
+  return result;
+
+
+};
 module.exports = { romanInteger };
