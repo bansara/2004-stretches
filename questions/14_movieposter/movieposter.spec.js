@@ -32,7 +32,7 @@ describe('movieposter functionality', () => {
       'West',
     ]);
     expect(
-      test.indexOf(`********
+      test).toEqual(`********
 * Once *
 * Upon *
 * a    *
@@ -40,7 +40,6 @@ describe('movieposter functionality', () => {
 * in   *
 * the  *
 * West *
-********`)
-    ).toEqual(0);
+********`);
   });
 });
