@@ -6,6 +6,23 @@
 //  23
 //  456
 
-const floydsTriangle = n => {};
+const floydsTriangle = n => {
+    let output = '';
+    if (!n) return output;
+    let num = 1;
+    function makeRow(rowNumber) {
+        let row = '';
+        for (let i = 1; i <= rowNumber; i++) {
+            row += num.toString();
+            num++;
+        }
+        return row;
+    }
+    for (let i = 0; i < n; i++) {
+        output += makeRow(i+1);
+        if(i < n - 1) output += '\n';
+    }
+    return output;
+};
 
 module.exports = { floydsTriangle };
