@@ -19,6 +19,17 @@
 //getrootvalue(object,40)=>'one'
 //returns -1 if value isn't found
 
-const getrootvalue = () => {};
+const getrootvalue = (obj, val) => {
+    let result = null;
+    for (let prop in obj) {
+        if(Array.isArray(obj[prop]) && obj[prop].includes(val)) {
+            result = prop;
+        } else {
+            result = getrootvalue(obj[prop],val)
+        }
+    }
+    return result;
+
+};
 
 module.exports = { getrootvalue };
