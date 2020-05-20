@@ -1,8 +1,5 @@
-const delay = async (str, time) => {
-   setTimeout(() => {
-    
-  }, time)
-  return str;
+const delay = (str, time) => {
+  //Your code here
 };
 
 module.exports = { delay };
