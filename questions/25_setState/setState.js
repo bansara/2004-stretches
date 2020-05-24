@@ -5,9 +5,19 @@
 class StatefulThing {
   constructor(initialState = {}) {
     this.state = initialState;
+    this.history = [this.state];
   }
-  setState() {
-    // YOUR CODE
+  setState(obj) {
+    this.history.push(this.state);
+    const newState = {...this.state}
+    for(let prop in obj) {
+      newState[prop] = obj[prop]
+    }
+    this.state = newState;
+    return this.state;
+  }
+  goBack(){
+    this.state = this.history.pop();
   }
 }
 
