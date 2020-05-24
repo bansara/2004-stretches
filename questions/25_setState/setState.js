@@ -5,7 +5,7 @@
 class StatefulThing {
   constructor(initialState = {}) {
     this.state = initialState;
-    this.history = [this.state];
+    this.history = [];
   }
   setState(obj) {
     this.history.push(this.state);
