@@ -15,5 +15,14 @@
 // ****no test writing required on this stretch
 
 // YOUR CODE (intentionally blank):
-
+Array.prototype.next = function () {
+    const length = this.length;
+    let index = 0;
+    const self = this;
+    function logNext() {
+        console.log(self[index])
+        index++;
+    }
+    logNext()
+}
 // no export statement required
