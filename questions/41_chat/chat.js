@@ -9,8 +9,18 @@ class Chat {
       listener(`${str} has joined chat!`)
     );
     this.listeners[str] = fn;
-    return {};
-  }
+
+    return {
+      talk: (msg) => {
+        const otherPeople = Object.keys(this.listeners).filter(key => key !== str);
+        otherPeople.forEach(person => {
+          console.log(`TO ${person.toUpperCase()}: ${str} says ${msg}`);
+        })
+          ;
+      }
+    }
+  };
 }
+
 
 module.exports = { Chat };
