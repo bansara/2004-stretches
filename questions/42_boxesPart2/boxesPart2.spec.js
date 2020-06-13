@@ -1,4 +1,4 @@
-const { Box } = require('../40_boxes/boxes');
+const { Box } = require('../42_boxesPart2/boxes');
 //You will need to continue working in the boxes.js in /40_boxes
 
 describe('Boxes, Part two!', () => {
