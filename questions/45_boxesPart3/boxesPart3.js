@@ -25,6 +25,9 @@ class Box {
     return result;
   }
   //YOUR CODE STARTS HERE
+  movingVan(t) {
+    return setTimeout(() => { return this.unpack() }, t)
+  }
 }
 
 module.exports = { Box };
