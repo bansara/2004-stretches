@@ -5,8 +5,16 @@
 
 //***Your solution should NOT include nested loops of any type***
 
-const twoNumberSum = () => {
+const twoNumberSum = (arr, target) => {
   //write code here
+  const result = []
+
+  arr.forEach(n => {
+    if (arr.includes(target - n)) {
+      result.push(n);
+    }
+  })
+  return result;
 };
 
 module.exports = { twoNumberSum };
