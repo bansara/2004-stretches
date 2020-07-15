@@ -3,5 +3,12 @@
 // Pass the specs provided
 
 //write your function here
+function* sqauredGen(x, y) {
+
+    for (let i = x + 1; i < y + 1; i++) {
+        yield i * i;
+    }
+
+}
 
 module.exports = { sqauredGen };
